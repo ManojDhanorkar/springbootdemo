@@ -1,5 +1,5 @@
 server:
-  port: 9090
+  port: 8080
 
 spring:
   application:
@@ -15,18 +15,18 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: create
-  cloud:
-    vault:
-      host: localhost
-      port: 8200
-      scheme: http
-      uri: http://localhost:8200
-      connection-timeout: 5000
-      read-timeout: 15000
-      token: s.To7q12r59B6XSLXj3tV3BPaq
+  #cloud:
+  #  vault:
+  #    host: localhost
+  #    port: 8200
+  #    scheme: http
+  #    uri: http://localhost:8200
+  #    connection-timeout: 5000
+  #    read-timeout: 15000
+  #    token: s.To7q12r59B6XSLXj3tV3BPaq
   datasource:
-    username: ${dbusername}
-    password: ${dbpassword}
+    username: postgres
+    password: postgres
     initialization-mode :  always
-    url: jdbc:postgresql://localhost:5432/postgres
+    url: jdbc:postgresql://postgres:5432/postgresdb
     driverClassName: org.postgresql.Driver

@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
         - name: demo
-          image: "thingsboard123/springbootdemo:0.0.1"
-          imagePullPolicy: "Always"
+          image: "springbootdemo:v6"
+          imagePullPolicy: "IfNotPresent"
           ports:
             - containerPort: 8080
           resources:
