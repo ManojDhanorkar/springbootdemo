@@ -58,3 +58,19 @@ spring.cloud.vault.port= 8200
 spring.cloud.vault.scheme= http
 spring.cloud.vault.token= s.To7q12r59B6XSLXj3tV3BPaq
 spring.config.import= vault://
+
+
+        env:
+            - name: POSTGRES_USER
+                valueFrom:
+                  configMapKeyRef:
+                    name: demo-config
+                    key: dbusername
+            - name: POSTGRES_PASSWORD
+                valueFrom:
+                  configMapKeyRef:
+                    name: demo-config
+                    key: dbpassword
+
+
+kubectl create configmap appconfig --from-file=application-override.yaml

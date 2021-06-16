@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demo-deployment
+  name: demo
 spec:
   selector:
     matchLabels:
@@ -14,10 +14,13 @@ spec:
     spec:
       containers:
         - name: demo
-          image: "springbootdemo:v6"
-          imagePullPolicy: "IfNotPresent"
+          image: "sbdemo:v4"
+          imagePullPolicy: "Never"
           ports:
             - containerPort: 8080
+          volumeMounts:
+            - name: config-volume
+              mountPath: /etc/config
           resources:
             requests:
               cpu: 100m
@@ -31,3 +34,7 @@ spec:
               port: 8080
             initialDelaySeconds: 180
             periodSeconds: 30      
+      volumes:
+        - name: config-volume
+          configMap:
+            name: appconfig

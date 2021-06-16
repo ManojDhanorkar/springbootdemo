@@ -7,7 +7,7 @@ spring:
   config:
     import:
       - optional:vault://
-      - optional:/etc/config/property-override.yml
+      - optional:file:/etc/config/application-override.properties
   jpa:
     properties:
       hibernate:
@@ -30,3 +30,8 @@ spring:
     initialization-mode :  always
     url: jdbc:postgresql://postgres:5432/postgresdb
     driverClassName: org.postgresql.Driver
+
+logging:
+  level:
+    com:
+      psl: INFO
