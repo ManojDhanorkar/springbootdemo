@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    username: sa
+    password: P@55w0rd
+    initialization-mode :  always
+    url: jdbc:h2:mem:employee
+    driverClassName: org.h2.Driver
