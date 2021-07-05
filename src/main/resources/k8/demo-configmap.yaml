@@ -1,10 +1,7 @@
 apiVersion: v1
+data:
+  application-override.properties: |
+    logging.level.com.example=DEBUG
 kind: ConfigMap
 metadata:
-  name: demo-config
-  labels:
-    app: demo
-data:
-  db: postgresdb
-  dbusername: postgres
-  dbpassword: postgres
+  name: appconfig

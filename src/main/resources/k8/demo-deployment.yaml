@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
         - name: demo
-          image: "sbdemo:v4"
-          imagePullPolicy: "Never"
+          image: "quay.io/manojdhanorkar/sbdemo:v2"
+          imagePullPolicy: "IfNotPresent"
           ports:
             - containerPort: 8080
           volumeMounts:
