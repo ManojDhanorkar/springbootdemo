@@ -36,4 +36,10 @@ spring:
 logging:
   level:
     com:
-      psl: INFO
+      example: INFO
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus,health,refresh,bus-interval
