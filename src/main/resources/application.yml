@@ -3,7 +3,7 @@ server:
 
 spring:
   profiles:
-    active:
+    active: h2
   application:
     name: springbootdemo
   config:
