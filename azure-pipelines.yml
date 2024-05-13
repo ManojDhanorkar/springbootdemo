@@ -2,11 +2,11 @@
 trigger:
  - main
 
-strategy:
-  maxParallel: 1
+# strategy:
+#   maxParallel: 1
 
-pool:
-   vmImage: 'ubuntu-latest'
+# pool:
+#    vmImage: 'ubuntu-latest'
 
 steps:
   - task: Bash@3
